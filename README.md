@@ -2,6 +2,10 @@
 custom request chat example with https://chat.openai.com
 
 
+### Python3
+
+打开 `ChatGPT.py` 文件：
+
 1、先安装依赖库
 
 ```bash
@@ -22,6 +26,25 @@ custom request chat example with https://chat.openai.com
 python3 ChatGPT.py
 ```
 
+### Swift
 
-代码参考：
-https://github.com/A-kirami/nonebot-plugin-chatgpt/blob/master/nonebot_plugin_chatgpt/chatgpt.py
+使用 `ChatGPT.swift` 文件：
+
+```swift
+let sessionToken = "这里填写 session token！！！"
+
+Task {
+	let bot = Chatbot(sessionToken: sessionToken)
+	// 你的问题： 
+	let prompt = "How to learn Swift"
+	prompt = "How to learn Swift"
+	print(prompt)
+	let content = await bot.getChatResponse(prompt: prompt)
+	print("回答：\(content)")
+}
+
+```
+
+
+### 代码参考
+- [A-kirami/nonebot-plugin-chatgpt/chatgpt.py](https://github.com/A-kirami/nonebot-plugin-chatgpt/blob/master/nonebot_plugin_chatgpt/chatgpt.py)
